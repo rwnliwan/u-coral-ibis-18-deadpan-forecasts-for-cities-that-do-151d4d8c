@@ -71,5 +71,17 @@ any of these invented city names.
     `thinking_wellformed`, `thinking_in_window`, `thinking_turns` (22 turns),
     `competition_open`, `snapshot` (5 files, 8,059 bytes),
     `transcripts_run_record`.
-- Bundle 2 / check 2: (to be filled after the re-bundle and re-check that
-  follow this revision.)
+- Bundle 2 / check 2 (26 Nov 2026 ~10:39 WITA, commit
+  `c8c6e75c85ad76899fd342c3887889b130658fe9`): bundle
+  `u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c-bundle.tar.gz`,
+  145,961 bytes, sha256
+  `e6957998e8dcd89ef7fdce1dbe88415667810fca5673f8114512b7e87fedbdc6`
+  (1 session, 27 turns, 101 lines). Check 2: **13 passed, 1 failed
+  (only `thinking_priced` — 0 usage rows, expected; the coordinator
+  attaches usage rows on re-bundle), 5 skipped, 5 checked at submission.**
+  `thinking_revised` now PASSES (trial-log.md from 2 write/edit messages).
+  `thinking_reproduces` 94/96 lines (97.9% authored); snapshot 5 files,
+  9,707 bytes. This revision records round-2 numbers; a final re-commit +
+  re-bundle + re-check follows, with its numbers in the handoff report to
+  the coordinator (the coordinator re-bundles again with usage rows before
+  submitting).
