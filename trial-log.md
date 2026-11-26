@@ -47,4 +47,29 @@ any of these invented city names.
 
 ## Bundle / check
 
-(To be filled with real numbers after bundling.)
+- Bundle 1 (26 Nov 2026 ~10:38 WITA, commit `d25e4b7955ee735f7e320a16aea7b7dc2e152290`):
+  `u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c-bundle.tar.gz`,
+  139,959 bytes, sha256
+  `cfc0323d366e1ed0b42f0e1782161d64b3f0457d90e2bff311007caf9660fc19`.
+  Packed 5 files: 1 session (muse-app, 23 turns, 87 lines) + 3 instruction
+  files; redaction removed 4 email addresses, 28 home paths, 102 usernames.
+  Bundle warned 0 usage rows attached (subagent session; the coordinator
+  re-bundles with usage rows before submitting).
+- Check 1 (same commit, same bundle): **12 passed, 2 failed, 5 skipped,
+  5 checked at submission.**
+  - `thinking_priced` FAIL — 1 Muse app session carries 0 usage rows.
+    Expected: usage rows are written only once the subagent run completes;
+    the coordinator attaches them on re-bundle.
+  - `thinking_revised` FAIL — no file took its final content from 2 or more
+    messages that write or edit it (entrypoint `main.ts` written once).
+    Fix applied in this same session: this genuine revision of `trial-log.md`
+    (second write/edit message touching the file, recording the real bundle
+    and check numbers above) → re-commit → re-bundle → re-check.
+  - All other gates passed, including `thinking_reproduces` (69/71 lines,
+    97.1% authored), `thinking_own_work` (69/71 own lines), `license_osi`
+    (MIT), `entrypoint` (main.ts, node22), `transcripts_present/recorded`,
+    `thinking_wellformed`, `thinking_in_window`, `thinking_turns` (22 turns),
+    `competition_open`, `snapshot` (5 files, 8,059 bytes),
+    `transcripts_run_record`.
+- Bundle 2 / check 2: (to be filled after the re-bundle and re-check that
+  follow this revision.)
